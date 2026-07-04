@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRIS | NITK Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Mock Browser Address Bar Container */
+        .browser-mockup {
+            width: 100%;
+            max-width: 500px;
+            background-color: #1a1c1e;
+            border-bottom: 1px solid #2d3135;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Top status/controls bar simulation */
+        .browser-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            font-size: 12px;
+            color: #9aa0a6;
+        }
+
+        /* Main Address Bar wrapper */
+        .address-bar-container {
+            display: flex;
+            align-items: center;
+            padding: 6px 12px 12px 12px;
+            gap: 12px;
+        }
+
+        .home-icon {
+            font-size: 20px;
+            cursor: pointer;
+            color: #e8eaed;
+        }
+
+        .address-url-box {
+            flex-grow: 1;
+            background-color: #2d3135;
+            border-radius: 20px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #e8eaed;
+            letter-spacing: 0.3px;
+        }
+
+        .lock-icon {
+            color: #8ab4f8;
+            font-size: 12px;
+        }
+
+        .browser-actions {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            color: #e8eaed;
+            font-size: 16px;
+        }
+
+        .tab-count {
+            border: 2px solid #e8eaed;
+            border-radius: 5px;
+            padding: 1px 5px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        /* Content Area holding the image */
+        .content-container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mocked Browser UI to show target URL -->
+    <div class="browser-mockup">
+        <div class="browser-top-bar">
+            <span>19:44</span>
+            <span>LTE / 5G 🔋 46%</span>
+        </div>
+        <div class="address-bar-container">
+            <span class="home-icon">🏠</span>
+            <div class="address-url-box">
+                <span class="lock-icon">🔒</span>
+                <strong>https://iris.nitk.ac.in</strong>
+            </div>
+            <div class="browser-actions">
+                <span class="tab-count">4</span>
+                <span>⋮</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Display Section -->
+    <div class="content-container">
+        <img src="image.png" alt="IRIS NITK Dashboard Screenshot" class="responsive-image">
+    </div>
+
+</body>
+</html>
